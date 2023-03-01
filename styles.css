@@ -1,0 +1,152 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Tilt Neon", "Battambang", cursive;
+}
+
+:root {
+  --primary: #252a41;
+  --secondary: #2e435c;
+  --third: #e78330;
+  --light: #cbdce6;
+
+  --background: #0b2239;
+  --card: #eff3f6;
+  --strong: #0b2239;
+  --correct: #067234;
+  --wrong: #b60228;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+}
+
+body.correct {
+  background-color: var(--correct);
+}
+
+body.wrong {
+  background-color: var(--wrong);
+}
+
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 800px;
+  max-width: 80%;
+  background-color: var(--card);
+  border-radius: 5px;
+  padding: 20px 25px;
+}
+
+.message {
+  color: red;
+}
+
+.info-container {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Result */
+.result-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.result-container h2 {
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+.result-container .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.grid .grid-item {
+  background-color: var(--light);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Question */
+#question {
+  font-size: 20px;
+}
+
+.answer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.answer-list input {
+  width: 15px;
+  height: 15px;
+}
+
+.answer {
+  background-color: var(--light);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.answer.correct {
+  border-bottom: 3px solid var(--correct);
+}
+
+.answer.wrong {
+  border-bottom: 3px solid var(--wrong);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.hide {
+  display: none;
+}
+
+.btn {
+  background: none;
+  border: none;
+  color: #fff;
+  background-color: var(--strong);
+  font-size: 18px;
+  font-weight: 600;
+  height: 40px;
+  width: 80px;
+  line-height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .result-container .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

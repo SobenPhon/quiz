@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+    <title>Quiz App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="info-container">
+        <p>សម្រាប់ការឆ្លើយត្រូវទទួលបាន ១០ពិន្ទុ​ មិនត្រឹមត្រូវនឹងដក ១០ពិន្ទុ</p>
+      </div>
+      <div id="question-container" class="hide">
+        <p id="quizNo">Quiz 2 of 5</p>
+        <h2 id="question">តើនិមិត្តសញ្ញាគីមីសម្រាប់ប្រាក់គឺជាអ្វី?</h2>
+        <div id="answer-list" class="answer-list"></div>
+        <div class="message"></div>
+      </div>
+      <div id="result-container" class="result-container hide">
+        <h2>លទ្ធផលសរុប</h2>
+        <div class="grid">
+          <p class="correct grid-item"></p>
+          <p class="score grid-item"></p>
+          <p class="wrong grid-item"></p>
+          <p class="sum grid-item"></p>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="start-btn" class="start-btn btn">ចាប់ផ្ដើម</button>
+        <button id="next-btn" class="start-btn btn hide">បន្ទាប់</button>
+      </div>
+    </div>
+  </body>
+</html>
